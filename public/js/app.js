@@ -19323,17 +19323,6 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./resources/css/app.css":
-/*!*******************************!*\
-  !*** ./resources/css/app.css ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -19341,7 +19330,17 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // import Vue from 'vue';
+
+
+window.$vue = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module 'vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())); // Vue.config.devtools = false;
+// Vue.component('navbar', require('./components/Navbar.vue').default);
+// Vue.component('articles', require('./components/articles.vue').default);
+// Vue.component('users', require('./components/Users.vue').default);
+
+var app = new Vue({
+  el: '#app'
+});
 
 /***/ }),
 
@@ -19377,15 +19376,38 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/sass/dashboard.scss":
+/*!***************************************!*\
+  !*** ./resources/sass/dashboard.scss ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/style.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/style.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!***********************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/css/app.css ***!
-  \***********************************************************/
+/*!***********************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/style.scss ./resources/sass/dashboard.scss ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/robinmoretti/Documents/LocalServeur/PicrossDrawer/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/robinmoretti/Documents/LocalServeur/PicrossDrawer/resources/css/app.css */"./resources/css/app.css");
+__webpack_require__(/*! /Users/robinmoretti/Documents/LocalServeur/PicrossDrawer/resources/sass/style.scss */"./resources/sass/style.scss");
+module.exports = __webpack_require__(/*! /Users/robinmoretti/Documents/LocalServeur/PicrossDrawer/resources/sass/dashboard.scss */"./resources/sass/dashboard.scss");
 
 
 /***/ })

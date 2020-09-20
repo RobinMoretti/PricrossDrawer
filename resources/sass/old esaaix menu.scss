@@ -1,0 +1,30 @@
+ul {
+    padding: 0;
+    margin: 0;
+    // display: flex;
+    // justify-content: flex-start;
+    // align-items: center;
+    // flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 1px;
+    margin-bottom: 47px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    align-items: center;
+    
+    li {
+      // width: 25%;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      margin-bottom: 0;
+      list-style-type: none;
+      box-sizing: content-box;
+      font-size: 18px;
+      height: 47px;
+      display: flex;
+      align-items: center;
+      // background-color: white;
+      // border-bottom: 1px solid black;
